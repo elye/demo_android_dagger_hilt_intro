@@ -1,6 +1,7 @@
 package com.elyeproj.daggerhiltexperiment
 
 import android.app.Application
+import android.util.Log
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject
 
@@ -11,6 +12,10 @@ class MainApplication: Application() {
 
     @Inject
     lateinit var applicationWideDependency: ApplicationWideDependency
+
+    init {
+        Log.d("TrackLog", "MainApplication::initialize")
+    }
 
     override fun onCreate() {
         super.onCreate()
