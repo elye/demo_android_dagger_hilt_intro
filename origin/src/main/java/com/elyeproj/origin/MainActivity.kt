@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import kotlinx.android.synthetic.main.activity_main.*
+import android.widget.TextView
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         applicationWideDependency.printMe()
         activityWideDependency.printMe()
 
-        my_txt.setOnClickListener {
+        findViewById<TextView>(R.id.my_txt).setOnClickListener {
             startActivity(Intent(this, MainActivity2::class.java))
         }
     }

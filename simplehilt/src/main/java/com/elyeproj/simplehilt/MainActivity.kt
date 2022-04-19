@@ -3,9 +3,9 @@ package com.elyeproj.simplehilt
 import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.HiltAndroidApp
-import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 @HiltAndroidApp
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        text_view.text = info.text
+        findViewById<TextView>(R.id.text_view).text = info.text
     }
 }
 
